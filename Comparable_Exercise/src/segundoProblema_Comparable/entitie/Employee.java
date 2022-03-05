@@ -1,6 +1,6 @@
 package segundoProblema_Comparable.entitie;
 
-public class Employee implements Comparable<Employee>{
+public class Employee implements Comparable<Employee> {
     private String name;
     private Double salary;
 

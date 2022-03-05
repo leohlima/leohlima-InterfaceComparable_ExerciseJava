@@ -14,18 +14,18 @@ public class App {
         List<Employee> employeeList = new ArrayList<>();
         String path = "C:\\Users\\leoli\\OneDrive\\Área de Trabalho\\JAVA\\secao18_Interfaces\\Comparable\\Comparable_Exercise\\in2.txt";
 
-        try(BufferedReader br = new BufferedReader(new FileReader(path))){
+        try (BufferedReader br = new BufferedReader(new FileReader(path))) {
             String employeeCsv = br.readLine();
-            while (employeeCsv != null){
+            while (employeeCsv != null) {
                 String[] fields = employeeCsv.split(",");
                 employeeList.add(new Employee(fields[0], Double.parseDouble(fields[1])));
                 employeeCsv = br.readLine();
             }
             Collections.sort(employeeList);
-            for (Employee n : employeeList){
+            for (Employee n : employeeList) {
                 System.out.println(n.getName() + "," + n.getSalary());
             }
-        } catch (IOException e){
+        } catch (IOException e) {
             System.out.println(e.getMessage());
         }
     }

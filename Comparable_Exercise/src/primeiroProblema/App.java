@@ -13,17 +13,17 @@ public class App {
         List<String> list = new ArrayList<>();
         String path = "C:\\Users\\leoli\\OneDrive\\Área de Trabalho\\JAVA\\secao18_Interfaces\\Comparable\\Comparable_Exercise\\in1.txt";
 
-        try(BufferedReader br = new BufferedReader(new FileReader(path))){
+        try (BufferedReader br = new BufferedReader(new FileReader(path))) {
             String name = br.readLine();
-            while (name != null){
+            while (name != null) {
                 list.add(name);
                 name = br.readLine();
             }
             Collections.sort(list);
-            for (String n : list){
+            for (String n : list) {
                 System.out.println(n);
             }
-        } catch (IOException e){
+        } catch (IOException e) {
             System.out.println(e.getMessage());
         }
     }
